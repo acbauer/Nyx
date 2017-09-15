@@ -382,6 +382,7 @@ main (int argc, char* argv[])
     if (Nyx::nSidecarProcs > 0)
       Nyx::forceParticleRedist = true;
 
+    std::cerr << "ACB main.cpp\n";
     Amr *amrptr = new Amr;
     amrptr->init(strt_time,stop_time);
 
@@ -535,6 +536,11 @@ main (int argc, char* argv[])
     }
 
     ParallelDescriptor::SetNProcsSidecars(0);
+#endif
+
+ #ifdef AMREX_USE_CATALYST
+    std::cerr << "ACB main.cpp ???????????????????? computing in situ\n";
+    amrptr->computeInSitu();
 #endif
 
     delete amrptr;

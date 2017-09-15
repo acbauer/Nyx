@@ -105,12 +105,12 @@ particles.v           = 2       # verbosity in Particle class
 
 # REFINEMENT / REGRIDDING
 amr.max_level          = 0        # maximum level number allowed
-#amr.ref_ratio          = 2 2 2 2
-#amr.regrid_int         = 4 4 4 4
-#amr.n_error_buf        = 0 0 0 8
-#amr.refine_grid_layout = 1
-#amr.regrid_on_restart  = 1
-#amr.blocking_factor    = 32
+amr.ref_ratio          = 2 2 2 2
+amr.regrid_int         = 4 4 4 4
+amr.n_error_buf        = 0 0 0 8
+amr.refine_grid_layout = 1
+amr.regrid_on_restart  = 1
+amr.blocking_factor    = 16
 
 # CHECKPOINT FILES
 amr.check_file      = chk
